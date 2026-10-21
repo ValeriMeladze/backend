@@ -1,3 +1,5 @@
+"""Django settings for yatube project."""
+
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -9,6 +11,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -54,6 +57,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'yatube_api.wsgi.application'
 
 
+# Database
 
 DATABASES = {
     'default': {
@@ -63,6 +67,7 @@ DATABASES = {
 }
 
 
+# Password validation
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -79,6 +84,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Internationalization
 
 LANGUAGE_CODE = 'ru-RU'
 
@@ -91,6 +97,7 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
 
@@ -98,6 +105,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
+# --- НАСТРОЙКИ DRF ---
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
